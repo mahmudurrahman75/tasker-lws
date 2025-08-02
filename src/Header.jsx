@@ -1,13 +1,53 @@
-import LWSLogo from './assets/lws-logo-en.svg';
+import Logo from './assets/logo.svg';
+import Ring from './assets/ring.svg';
+import Moon from './assets/icons/moon.svg';
+import ShoppingCard from './assets/shopping-cart.svg';
 
 export default function Header() {
   return (
-    <nav className="py-6 md:py-8 fixed top-0 w-full !bg-[#191D26] z-50">
-      <div className="container mx-auto flex items-center justify-between gap-x-6">
-        <a href="/">
-          <img className="h-[45px]" src={LWSLogo} alt="Lws" />
+    <header>
+      <nav class="container flex items-center justify-between space-x-10 py-6">
+        <a href="index.html">
+          <img src={Logo} width="139" height="26" alt="" />
         </a>
-      </div>
-    </nav>
+
+        <ul class="flex items-center space-x-5">
+          <li>
+            <a
+              class="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              href="#"
+            >
+              <img src={Ring} width="24" height="24" alt="" />
+            </a>
+          </li>
+          <li>
+            <a
+              class="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              href="#"
+            >
+              <img
+                src={Moon}
+                width="24"
+                height="24"
+                alt=""
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              href="#"
+            >
+              <img
+                src={ShoppingCard}
+                width="24"
+                height="24"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }

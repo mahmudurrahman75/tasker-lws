@@ -1,22 +1,22 @@
-
-import './App.css';
-import Footer from './Footer';
-import Header from './Header';
-import HeroSection from './HeroSection';
-import TaskBoard from './task/TaskBoard';
+import "./App.css";
+import MovieList from "./cine/MovieList";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 function App() {
-
   return (
-   <div>
-      <Header/>
-      <div className='flex flex-col justify-center items-center'>
-        <HeroSection/>
-        <TaskBoard/>
-      </div>
-      <Footer/>
-   </div>
-  )
+    <>
+      <Header />
+
+      <main>
+        <div class="container grid lg:grid-cols-[218px_1fr] gap-[3.5rem]">
+          <Sidebar />
+          <MovieList />
+        </div>
+      </main>
+      
+    </>
+  );
 }
 
-export default App
+export default App;
